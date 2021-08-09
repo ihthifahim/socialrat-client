@@ -20,6 +20,18 @@ export default function CampaignActivityNew() {
     const [status, setStatus] = useState("Pending");
     const [activityNotes, setActivityNotes] = useState("");
 
+    const handleLKR = (e) => {
+        // const newBudgetLKR = parseFloat(budgetLKR.replace(/[^\d\.\-]/g, ""));
+        // const newBudgetUSD = parseFloat(budgetUSD.replace(/[^\d\.\-]/g, ""));
+        setBudgetLKR(parseFloat(e.target.value.replace(/[^\d\.\-]/g, "")))
+    }
+
+    const handleUSD = (e) => {
+        // const newBudgetLKR = parseFloat(budgetLKR.replace(/[^\d\.\-]/g, ""));
+        // const newBudgetUSD = parseFloat(budgetUSD.replace(/[^\d\.\-]/g, ""));
+        setBudgetUSD(parseFloat(e.target.value.replace(/[^\d\.\-]/g, "")))
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         const newActivity = [activityName, roNumber, platform, budgetLKR, budgetUSD, startDate, endDate, primaryKPI, secondaryKPI, creativeLink, status, activityNotes, CampaignId.data];
@@ -101,13 +113,13 @@ export default function CampaignActivityNew() {
                                                 <div className="col-md-6">
                                                 <div className="mb-3">
                                                     <label className="form-label">Budget LKR (with Commission)</label>
-                                                    <input type="text" className="form-control" required id="formrow-email-input" onChange={(e) => { setBudgetLKR(e.target.value)}} />
+                                                    <input type="text" className="form-control" required id="formrow-email-input" onChange={handleLKR} />
                                                 </div>
                                                 </div>
                                                 <div className="col-md-6">
                                                 <div className="mb-3">
                                                     <label className="form-label">Budget USD (without Commission)</label>
-                                                    <input type="text" className="form-control" required id="formrow-email-input" onChange={(e) => { setBudgetUSD(e.target.value)}}/>
+                                                    <input type="text" className="form-control" required id="formrow-email-input" onChange={handleUSD}/>
                                                 </div>
                                                 </div>
                                             </div>
