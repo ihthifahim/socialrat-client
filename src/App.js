@@ -24,7 +24,7 @@ import NewClient from './pages/ClientPages/NewClient';
 
 import {AuthContext} from './helpers/AuthContext';
 
-import NotFoundPage from './pages/404';
+import NotFoundPage from './pages/NotFoundPage';
 
 //Login
 import Login from './pages/login';
