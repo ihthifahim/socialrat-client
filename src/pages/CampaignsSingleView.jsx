@@ -53,7 +53,7 @@ export default function CampaignsSingleView() {
     let history = useHistory();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/campaign-tracker/brand-name/${campaignDetails.client}`).then((response) => {
+        axios.get(`https://socialrat.herokuapp.com/campaign-tracker/brand-name/${campaignDetails.client}`).then((response) => {
             setSelectedCLient(response.data);
         });
 
