@@ -19,7 +19,7 @@ export default function CampaignNew() {
     const [notes, setNotes] = useState("");
 
     useEffect(() => {
-        axios.get("http://localhost:5000/campaign-tracker/client-details").then((response) => {
+        axios.get("https://socialrat.herokuapp.com/campaign-tracker/client-details").then((response) => {
             setClientDetails(response.data);
         })
     }, []);
