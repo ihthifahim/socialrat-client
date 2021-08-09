@@ -13,7 +13,7 @@ export default function EditClient() {
     const [isPending, setIsPending] = useState(false);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/campaign-tracker/client-details/edit/${id}`).then((response) => {
+        axios.get(`https://socialrat.herokuapp.com/campaign-tracker/client-details/edit/${id}`).then((response) => {
             setClientDetails(response.data); 
             setClientName(response.data.client_name);
             setBrands(response.data.brands);   
@@ -23,7 +23,7 @@ export default function EditClient() {
     const handleSubmit = (e) => {
         setIsPending(true);
         e.preventDefault();
-        axios.put(`http://localhost:5000/campaign-tracker/client-details/edit/${id}`, { client_name: clientName, brands: brands }).then((response) => {
+        axios.put(`https://socialrat.herokuapp.com/campaign-tracker/client-details/edit/${id}`, { client_name: clientName, brands: brands }).then((response) => {
             if(response.data == "Updated"){
                 setIsPending(false);
                 history.goBack();

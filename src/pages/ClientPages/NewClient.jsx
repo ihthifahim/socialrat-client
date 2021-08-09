@@ -14,7 +14,7 @@ export default function NewClient() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newClient = [brands, clientName]
-        axios.post("http://localhost:5000/campaign-tracker/new-client", newClient).then((response) => {
+        axios.post("https://socialrat.herokuapp.com/campaign-tracker/new-client", newClient).then((response) => {
             history.goBack();
         })
     }
