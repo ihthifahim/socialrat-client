@@ -24,6 +24,8 @@ import NewClient from './pages/ClientPages/NewClient';
 
 import {AuthContext} from './helpers/AuthContext';
 
+import NotFoundPage from './pages/404';
+
 //Login
 import Login from './pages/login';
 
@@ -68,6 +70,7 @@ function App() {
             <ProtectedRoute exact path="/new-client" component={NewClient} isAuth={authState}/>
             <ProtectedRoute exact path="/edit-client/:id" component={EditClient} isAuth={authState}/>
 
+            <Route path="*" component={NotFoundPage} />
 
             {/** Login */}
           </div>
