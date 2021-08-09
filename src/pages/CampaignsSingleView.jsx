@@ -67,7 +67,7 @@ export default function CampaignsSingleView() {
         if(clientName == "none"){
             setSelectedCLient([]);
         } else {
-            axios.get(`http://localhost:5000/campaign-tracker/brand-name/${clientName}`).then((response) => {
+            axios.get(`https://socialrat.herokuapp.com/campaign-tracker/brand-name/${clientName}`).then((response) => {
                 setSelectedCLient(response.data);
                 setClient(clientName);
             });
@@ -80,7 +80,7 @@ export default function CampaignsSingleView() {
    const handleSubmit = (e) => {
        setIsPending(true);
         e.preventDefault();
-        axios.put(`http://localhost:5000/campaign-tracker/campaign-details/edit/${id}`, { campaignName: campaignName, client: client, brandName: brand, clientApproval: clientApproval, startDate: startDate, endDate: endDate, notes: notes}).then((response) => {
+        axios.put(`https://socialrat.herokuapp.com/campaign-tracker/campaign-details/edit/${id}`, { campaignName: campaignName, client: client, brandName: brand, clientApproval: clientApproval, startDate: startDate, endDate: endDate, notes: notes}).then((response) => {
             
             window.location.reload();
             setIsPending(false);

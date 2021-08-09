@@ -21,7 +21,7 @@ export default function Login() {
 
         const loginData = [username, password];
         console.log(username);
-        axios.post("http://localhost:5000/auth/login", loginData).then((response) => {
+        axios.post("https://socialrat.herokuapp.com/auth/login", loginData).then((response) => {
             if(response.data.error){
               alert(response.data.error);
             } else {

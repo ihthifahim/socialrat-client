@@ -16,7 +16,7 @@ export default function AllActivityOverview() {
 
 
     useEffect(() => {
-        axios.get("http://localhost:5000/campaign-tracker/all-activities").then((response) => {
+        axios.get("https://socialrat.herokuapp.com/campaign-tracker/all-activities").then((response) => {
             setAllActivities(response.data);
             setIsPending(false);
         })

@@ -17,7 +17,7 @@ function AllCampaigns() {
 
     useEffect(() => {
         
-        axios.get("http://localhost:5000/campaign-tracker/all-campaigns").then((response) => {
+        axios.get("https://socialrat.herokuapp.com/campaign-tracker/all-campaigns").then((response) => {
             setAllCampaigns(response.data);
             setIsPending(false);
         })

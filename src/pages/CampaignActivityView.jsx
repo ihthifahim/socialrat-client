@@ -25,7 +25,7 @@ export default function CampaignActivityView() {
 
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/campaign-tracker/campaign-activity/edit/${id}`).then((response) => {
+        axios.get(`https://socialrat.herokuapp.com/campaign-tracker/campaign-activity/edit/${id}`).then((response) => {
             setActivityDetails(response.data);
             setActivityName(response.data.activityName);
             setRoNumber(response.data.ro_number);
@@ -62,7 +62,7 @@ export default function CampaignActivityView() {
         
         
         
-        axios.put(`http://localhost:5000/campaign-tracker/campaign-activity/edit/${id}`, { roNumber: roNumber, activityName: activityName, platform: platform, budgetLKR: budgetLKR, budgetUSD: budgetUSD, primaryKPI: primaryKPI, secondaryKPI: secondaryKPI, creativeLink: creativeLink, startDate: startDate, endDate: endDate, status: status, comments: activityNotes })
+        axios.put(`https://socialrat.herokuapp.com/campaign-tracker/campaign-activity/edit/${id}`, { roNumber: roNumber, activityName: activityName, platform: platform, budgetLKR: budgetLKR, budgetUSD: budgetUSD, primaryKPI: primaryKPI, secondaryKPI: secondaryKPI, creativeLink: creativeLink, startDate: startDate, endDate: endDate, status: status, comments: activityNotes })
         .then((response) => {
             history.goBack();
             

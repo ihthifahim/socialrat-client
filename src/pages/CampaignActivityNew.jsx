@@ -23,7 +23,7 @@ export default function CampaignActivityNew() {
     const handleSubmit = (e) => {
         e.preventDefault();
         const newActivity = [activityName, roNumber, platform, budgetLKR, budgetUSD, startDate, endDate, primaryKPI, secondaryKPI, creativeLink, status, activityNotes, CampaignId.data];
-        axios.post("http://localhost:5000/campaign-tracker/campaign-activitynew", {
+        axios.post("https://socialrat.herokuapp.com/campaign-tracker/campaign-activitynew", {
             budgetLKR: budgetLKR,
             budgetUSD: budgetUSD,
             startDate: startDate,

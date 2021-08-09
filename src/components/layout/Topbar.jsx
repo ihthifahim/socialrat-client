@@ -10,7 +10,7 @@ export default function Topbar({user}) {
     let history = useHistory();
 
     useEffect(() => {
-        axios.get("http://localhost:5000/auth/auth", {headers: { accessToken: localStorage.getItem("accessToken")}}).then((response) => {
+        axios.get("https://socialrat.herokuapp.com/auth/auth", {headers: { accessToken: localStorage.getItem("accessToken")}}).then((response) => {
           if(response.data.error){
             setAuthState(false)
             

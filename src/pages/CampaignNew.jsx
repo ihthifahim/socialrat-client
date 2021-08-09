@@ -30,7 +30,7 @@ export default function CampaignNew() {
         if(clientName == "none"){
             setSelectedClient([]);
         } else {
-            axios.get(`http://localhost:5000/campaign-tracker/brand-name/${clientName}`).then((response) => {
+            axios.get(`https://socialrat.herokuapp.com/campaign-tracker/brand-name/${clientName}`).then((response) => {
                 setSelectedClient(response.data);  
                 setClient(clientName);   
             });
@@ -43,7 +43,7 @@ export default function CampaignNew() {
         e.preventDefault();
         const newCampaign = [client, brand, campaignName, clientApproval, startDate, endDate, notes];
 
-        axios.post("http://localhost:5000/campaign-tracker/campaign-details", newCampaign, {
+        axios.post("https://socialrat.herokuapp.com/campaign-tracker/campaign-details", newCampaign, {
             headers: {
                 accessToken: localStorage.getItem("accessToken"),
             }
