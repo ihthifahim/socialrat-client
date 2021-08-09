@@ -25,7 +25,7 @@ export default function CampaignsSingleView() {
     
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/campaign-tracker/campaign-view/${id}`).then((response) => {
+        axios.get(`https://socialrat.herokuapp.com/campaign-tracker/campaign-view/${id}`).then((response) => {
             setCampaignDetails(response.data);
             setClient(response.data.client);
             setCampaignName(response.data.campaign_name);
@@ -37,11 +37,11 @@ export default function CampaignsSingleView() {
             
         });
 
-        axios.get("http://localhost:5000/campaign-tracker/client-details").then((response) => {
+        axios.get("https://socialrat.herokuapp.com/campaign-tracker/client-details").then((response) => {
             setClientDetails(response.data);
         });
 
-        axios.get(`http://localhost:5000/campaign-tracker/campaign-activity/${id}`).then((response) => {
+        axios.get(`https://socialrat.herokuapp.com/campaign-tracker/campaign-activity/${id}`).then((response) => {
             setCampaignActivities(response.data);
         });
         
