@@ -21,6 +21,8 @@ export default function CampaignActivityNew() {
     const [status, setStatus] = useState("Pending");
     const [activityNotes, setActivityNotes] = useState("");
 
+    const [isPending, setIsPending] = useState(false);
+
     const handleLKR = (e) => {
         // const newBudgetLKR = parseFloat(budgetLKR.replace(/[^\d\.\-]/g, ""));
         // const newBudgetUSD = parseFloat(budgetUSD.replace(/[^\d\.\-]/g, ""));
@@ -34,6 +36,7 @@ export default function CampaignActivityNew() {
     }
 
     const handleSubmit = (e) => {
+        setIsPending(true);
         e.preventDefault();
         const newActivity = [activityName, roNumber, platform, budgetLKR, budgetUSD, startDate, endDate, primaryKPI, secondaryKPI, creativeLink, status, activityNotes, CampaignId.data];
         axios.post("https://socialrat.herokuapp.com/campaign-tracker/campaign-activitynew", {
@@ -51,7 +54,7 @@ export default function CampaignActivityNew() {
             platform: platform, 
             CampaignId: CampaignId.id
         }).then((response) => {
-
+            setIsPending(false);
             history.goBack();
 
         })
