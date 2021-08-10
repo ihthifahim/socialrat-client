@@ -192,7 +192,8 @@ export default function CampaignActivityNew() {
 
                                             
                                             <div>
-                                                <button type="submit" className="btn btn-success w-md">Create new Activity</button>
+                                            !isPending && <button type="submit" className="btn btn-success w-md">Create New Activity</button>}
+                                                {isPending && <button type="submit" className="btn btn-primary w-md" disabled>Creating new activity. please wait...</button>}
                                             </div>
                                         </form>
 

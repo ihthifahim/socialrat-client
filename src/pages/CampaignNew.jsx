@@ -150,7 +150,7 @@ export default function CampaignNew() {
                                             
                                             <div>
                                             {!isPending && <button type="submit" className="btn btn-success w-md">Create Campaign</button>}
-                                            {isPending && <button type="submit" className="btn btn-success w-md" disabled>Creating new campaign</button>}
+                                            {isPending && <button type="submit" className="btn btn-primary w-md" disabled>Creating new campaign. Please wait....</button>}
                                             
                                                 
                                             </div>
