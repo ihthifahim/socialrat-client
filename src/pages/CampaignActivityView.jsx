@@ -57,6 +57,10 @@ export default function CampaignActivityView() {
         setBudgetUSD(parseFloat(e.target.value.replace(/[^\d\.\-]/g, "")))
     }
 
+    const handleGoBack = () => {
+        history.goBack();
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault();
         
@@ -206,7 +210,8 @@ export default function CampaignActivityView() {
                                                 <button type="submit" className="btn btn-success w-md">Update Activity</button>
                                             </div>
                                         </form>
-
+                                        <br/>
+                                        <button type="button" className="btn btn-primary w-md" onClick={handleGoBack}>Go Back</button>
 
 
 
