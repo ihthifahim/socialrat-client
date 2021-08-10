@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useHistory } from 'react-router';
+import {Helmet} from "react-helmet";
 
 export default function CampaignNew() {
 
@@ -63,6 +64,11 @@ export default function CampaignNew() {
 
     return (
         <div>
+            <Helmet>
+                <title>Create new Campaign | Socialrat</title>
+            </Helmet>
+
+
             <div className="main-content">
                 <div className="page-content">
                     <div className="container-fluid">

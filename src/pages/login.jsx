@@ -1,6 +1,8 @@
 import React, { useState, useContext } from 'react'
 import axios from "axios";
 import {useHistory} from "react-router-dom";
+import {Helmet} from "react-helmet";
+
 
 import { AuthContext } from '../helpers/AuthContext';
 
@@ -33,6 +35,11 @@ export default function Login() {
 
     return (
         <div>
+          <Helmet>
+                <title>Login | Socialrat</title>
+            </Helmet>
+
+
         <div className="container-fluid p-0">
           <div className="row g-0">
             <div className="col-xl-9">

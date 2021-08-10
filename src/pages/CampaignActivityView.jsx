@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import { Link, useParams, useHistory } from 'react-router-dom';
 import axios from 'axios';
+import {Helmet} from "react-helmet";
 
 export default function CampaignActivityView() {
 
@@ -78,6 +79,10 @@ export default function CampaignActivityView() {
 
     return (
         <div>
+            <Helmet>
+                <title>{activityName} | Socialrat</title>
+            </Helmet>
+            
             <div className="main-content">
                 <div className="page-content">
                     <div className="container-fluid">

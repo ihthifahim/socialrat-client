@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import {Link, useHistory} from 'react-router-dom';
 import axios from "axios";
 import moment from "moment";
+import {Helmet} from "react-helmet";
 
 
 
@@ -26,6 +27,11 @@ function AllCampaigns() {
 
     return (
         <div>
+            <Helmet>
+                <title>All Campaigns | Socialrat</title>
+            </Helmet>
+
+
             <div className="main-content">
                 <div className="page-content">
                     <div className="container-fluid">
