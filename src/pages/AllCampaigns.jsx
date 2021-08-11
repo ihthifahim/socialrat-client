@@ -21,6 +21,7 @@ function AllCampaigns() {
         axios.get("https://socialrat.herokuapp.com/campaign-tracker/all-campaigns").then((response) => {
             setAllCampaigns(response.data);
             setIsPending(false);
+            
         })
 
     }, []);

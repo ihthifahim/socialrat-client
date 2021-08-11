@@ -27,6 +27,7 @@ import {AuthContext} from './helpers/AuthContext';
 
 //Login
 import Login from './pages/login';
+import FacebookAPI from './pages/FacebookAPI';
 
 
 function App() {
@@ -68,6 +69,7 @@ function App() {
 
             <ProtectedRoute exact path="/new-client" component={NewClient} isAuth={authState}/>
             <ProtectedRoute exact path="/edit-client/:id" component={EditClient} isAuth={authState}/>
+            <ProtectedRoute exact path="/facebook" component={FacebookAPI} isAuth={authState}/>
 
 
             {/** Login */}

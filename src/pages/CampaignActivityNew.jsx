@@ -112,6 +112,7 @@ export default function CampaignActivityNew() {
                                                     <option value="Youtube">Youtube</option>
                                                     <option value="Google">Google</option>
                                                     <option value="Twitter">Twitter</option>
+                                                    <option value="Linkedin">Linkedin</option>
                                                     </select>
                                                 </div>
                                                 </div>

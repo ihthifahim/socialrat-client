@@ -129,6 +129,7 @@ export default function CampaignActivityView() {
                                                     <option selected={activityDetails.platform == "Youtube"} value="Youtube">Youtube</option>
                                                     <option selected={activityDetails.platform == "Google"} value="Google">Google</option>
                                                     <option selected={activityDetails.platform == "Twitter"} value="Twitter">Twitter</option>
+                                                    <option selected={activityDetails.platform == "Linkedin"} value="Linkedin">Linkedin</option>
                                                     
                                                     </select>
                                                 </div>
