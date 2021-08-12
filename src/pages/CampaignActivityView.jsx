@@ -22,11 +22,16 @@ export default function CampaignActivityView() {
     const [creativeLink, setCreativeLink] = useState("");
     const [status, setStatus] = useState("");
     const [activityNotes, setActivityNotes] = useState("");
+
+
+    const [isPending, setIsPending] = useState(false);
     
 
 
     useEffect(() => {
         axios.get(`https://socialrat.herokuapp.com/campaign-tracker/campaign-activity/edit/${id}`).then((response) => {
+            setIsPending(true);
+
             setActivityDetails(response.data);
             setActivityName(response.data.activityName);
             setRoNumber(response.data.ro_number);
@@ -213,7 +218,10 @@ export default function CampaignActivityView() {
 
                                             
                                             <div>
-                                                <button type="submit" className="btn btn-success w-md">Update Activity</button>
+                                                {!isPending && <button type="submit" className="btn btn-success w-md">Update Activity Activity</button>}
+                                                {isPending && <button type="submit" className="btn btn-primary w-md" disabled>Updating activity. please wait...</button>}
+
+                                               
                                             </div>
                                         </form>
                                         <br/>
