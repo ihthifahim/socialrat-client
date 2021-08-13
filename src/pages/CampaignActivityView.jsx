@@ -30,7 +30,7 @@ export default function CampaignActivityView() {
 
     useEffect(() => {
         axios.get(`https://socialrat.herokuapp.com/campaign-tracker/campaign-activity/edit/${id}`).then((response) => {
-            setIsPending(true);
+            
 
             setActivityDetails(response.data);
             setActivityName(response.data.activityName);
@@ -68,12 +68,14 @@ export default function CampaignActivityView() {
     }
 
     const handleSubmit = (e) => {
+        setIsPending(true);
         e.preventDefault();
         
         
         
         axios.put(`https://socialrat.herokuapp.com/campaign-tracker/campaign-activity/edit/${id}`, { roNumber: roNumber, activityName: activityName, platform: platform, budgetLKR: budgetLKR, budgetUSD: budgetUSD, primaryKPI: primaryKPI, secondaryKPI: secondaryKPI, creativeLink: creativeLink, startDate: startDate, endDate: endDate, status: status, comments: activityNotes })
         .then((response) => {
+            setIsPending(false);
             history.goBack();
             
         })
