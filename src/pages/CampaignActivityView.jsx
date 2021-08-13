@@ -220,7 +220,7 @@ export default function CampaignActivityView() {
 
                                             
                                             <div>
-                                                {!isPending && <button type="submit" className="btn btn-success w-md">Update Activity Activity</button>}
+                                                {!isPending && <button type="submit" className="btn btn-success w-md">Update Activity</button>}
                                                 {isPending && <button type="submit" className="btn btn-primary w-md" disabled>Updating activity. please wait...</button>}
 
                                                
