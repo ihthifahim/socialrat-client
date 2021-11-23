@@ -222,6 +222,7 @@ export default function CampaignsSingleView() {
                                                     <th className="align-middle">RO #</th>
                                                     <th className="align-middle">Activity Name</th>
                                                     <th className="align-middle">Platform</th>
+                                                    <th className="align-middle">Budget USD</th>
                                                     <th className="align-middle">Start Date</th>
                                                     <th className="align-middle">End Date</th>
                                                     <th className="align-middle">Status</th>
@@ -235,6 +236,7 @@ export default function CampaignsSingleView() {
                                                                 <td>{value.ro_number}</td>
                                                                 <td>{value.activityName}</td>
                                                                 <td>{value.platform}</td>
+                                                                <td>{value.budgetUSD}</td>
                                                                 <td>{value.startDate}</td>
                                                                 <td>{value.endDate}</td>
                                                                 

@@ -66,6 +66,7 @@ export default function AllActivityOverview() {
                                                     <th className="align-middle">Campaign Name</th>
                                                     <th className="align-middle">Activity Name</th>
                                                     <th className="align-middle">Platform</th>
+                                                    <th className="align-middle">Budget USD</th>
                                                     <th className="align-middle">Start Date</th>
                                                     <th className="align-middle">End Date</th>
                                                     <th className="align-middle">Created Date</th>
@@ -88,6 +89,7 @@ export default function AllActivityOverview() {
                                                             <td>{value.Campaign.campaign_name}</td>
                                                             <td>{value.activityName}</td>
                                                             <td>{value.platform}</td>
+                                                            <td>{value.budgetUSD}</td>
                                                             <td>{value.startDate}</td>
                                                             <td>{value.endDate}</td>
                                                             <td>{moment(value.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</td>
