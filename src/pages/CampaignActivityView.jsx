@@ -204,7 +204,9 @@ export default function CampaignActivityView() {
                                                     
                                                     <option selected={activityDetails.status == "In-review"} value="In-review">In-Review</option>
                                                     <option selected={activityDetails.status == "Pending"} value="Pending">Pending</option>
+                                                    <option selected={activityDetails.status == "Learning"} value="Learning">Learning</option>
                                                     <option selected={activityDetails.status == "Completed"} value="Completed">Completed</option>
+
                                                     
                                                     </select>
                                                 </div>
