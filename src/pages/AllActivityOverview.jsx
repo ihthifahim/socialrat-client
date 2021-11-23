@@ -95,7 +95,7 @@ export default function AllActivityOverview() {
                                                             <td>{value.startDate}</td>
                                                             <td>{value.endDate}</td>
                                                             <td>{moment(value.createdAt).format('MMMM Do YYYY, h:mm:ss a')}</td>
-                                                            <td><span className="badge badge-pill  font-size-11" className={value.status === "Completed" ? "badge-soft-success" : value.status === "Pending" ? "badge-soft-danger" : value.status === "Testing" ? "badge-soft-primary" : "badge-soft-warning"}>{value.status}</span></td>                                                            
+                                                            <td><span className="badge badge-pill  font-size-11" className={value.status === "Completed" ? "badge-soft-success" : value.status === "Pending" ? "badge-soft-danger" : value.status === "Learning" ? "badge-soft-primary" : "badge-soft-warning"}>{value.status}</span></td>                                                            
                                                             <td><span className="bx bx-pencil" onClick={() => { history.push(`/activity-view/${value.id}`)}}></span></td>
                                                             
                                                         </tr>
