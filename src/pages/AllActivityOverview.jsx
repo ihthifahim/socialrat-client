@@ -73,6 +73,7 @@ export default function AllActivityOverview() {
                                                     <th className="align-middle">Status</th>
                                                     <th className="align-middle"></th>
                                                 </tr>
+                                                
                                                 </thead>
                                                 <tbody>
                                                     {isPending && <tr><td colspan="7"><h3>Loading your shit...</h3></td></tr>}
